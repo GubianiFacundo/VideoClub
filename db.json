@@ -17,7 +17,17 @@
       "usuario": "falito",
       "contrasena": "falito1",
       "telefono": "3434123456",
-      "correo": "sesshomaru4231@gmail.com",
+      "correo": "sess@gmail.com",
+      "estado": ""
+    },
+    {
+      "id": 3,
+      "nombre": "Manuel",
+      "apellido": "Balbuena",
+      "usuario": "usuario",
+      "contrasena": "usuario",
+      "telefono": "3434696552",
+      "correo": "yosoymanuel@gmail.com",
       "estado": ""
     }
   ],
@@ -51,6 +61,36 @@
       "alquilada": true,
       "valoracion": 75,
       "cantidadAlquileres": 61
+    },
+    {
+      "id": 4,
+      "titulo": "The Avengers",
+      "descripcion": "El dios asgardiano exiliado Loki se encuentra con El Otro,2​ un líder de una raza extraterrestre conocida como los Chitauri. Con quienes llegan a un trato, a cambio de recuperar el Teseracto, una fuente de poderosa energía de potencial desconocido, el Otro promete ofrecerle a Loki un ejército con el que puede subyugar a la tierra.",
+      "imagen": "https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/2/2b/The_Avengers_Poster.png/revision/latest?cb=20150610135853&path-prefix=es",
+      "genero": "Acción",
+      "alquilada": true,
+      "valoracion": 76,
+      "cantidadAlquileres": 92
+    },
+    {
+      "id": 5,
+      "titulo": "Sherlock Holmes",
+      "descripcion": "En 1891, Londres, el detective Sherlock Holmes (Robert Downey Jr.) y su socio y compañero el Dr. John Watson (Jude Law) corren para evitar el asesinato-ritual de una mujer por Lord Henry Blackwood (Mark Strong), que ha matado a otras cinco mujeres jóvenes de forma similar.",
+      "imagen": "https://resizing.flixster.com/IrsRkzzvC5d7j0lf4Po-9AzVzT8=/206x305/v1.bTsxMTE2NjcyODtqOzE3OTQ5OzEyMDA7ODAwOzEyMDA",
+      "genero": "Drama, Acción",
+      "alquilada": false,
+      "valoracion": 56,
+      "cantidadAlquileres": 38
+    },
+    {
+      "id": 6,
+      "titulo": "Shutter Island",
+      "descripcion": "En 1954, los agentes federales Edward Teddy Daniels (Leonardo DiCaprio) y su recientemente asignado compañero Chuck Aule (Mark Ruffalo), van al hospital de Ashecliffe para personas dementes en Shutter Island, isla situada en el puerto de Boston para investigar la desaparición de Rachel Solando, una paciente que en apariencia se evaporó de una habitación cerrada.",
+      "imagen": "https://upload.wikimedia.org/wikipedia/en/7/76/Shutterislandposter.jpg",
+      "genero": "Drama, Acción",
+      "alquilada": true,
+      "valoracion": 82,
+      "cantidadAlquileres": 56
     }
   ]
 }

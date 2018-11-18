@@ -9,7 +9,7 @@ export class Usuario {
     telefono:string;
     correo:string;
     estado:string;
-    histPeliculas:string[]
+    histPeliculas:string[] //¿?
    
 
         constructor(values:Object={})

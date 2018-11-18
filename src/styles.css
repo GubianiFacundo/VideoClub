@@ -55,9 +55,13 @@
 }
 
 .textColorG{
-    color: green;
+    color: greenyellow;
 }
 
 .textColorR{
-    color: red;
+    color: darkred;
+}
+
+.form-check {
+    margin: 20%;
 }
