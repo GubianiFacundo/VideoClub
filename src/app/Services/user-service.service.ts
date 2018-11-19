@@ -7,45 +7,40 @@ import { HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserServiceService {
-  url:string='http://localhost:3000/usuarios';
+  url = 'http://localhost:3000/usuarios';
 
 
-  usuarios:Observable<Usuario[]>
-  usuarios2:Usuario[];
-  loginUser:string;
+  usuarios: Observable<Usuario[]>;
+  usuarios2: Usuario[];
+  loginUser: string;
 
-  constructor(private _http:HttpClient) { 
-    this.usuarios2=[];
+  constructor(private _http: HttpClient) {
+    this.usuarios2 = [];
   }
 
-  logOut()
-  {
-    this.loginUser=null;
+  logOut() {
+    this.loginUser = null;
   }
 
-  addUsuario(usuario:Usuario):Observable<Usuario>
-  {
-    return this._http.post<Usuario>(this.url,usuario)
-    
+  addUsuario(usuario: Usuario): Observable<Usuario> {
+    return this._http.post<Usuario>(this.url, usuario);
+
   }
 
-  removeUsuario(id:number):Observable<Usuario>
-  {
-    return this._http.delete<null>(this.url+"/"+id);
+  removeUsuario(id: number): Observable<Usuario> {
+    return this._http.delete<null>(this.url + '/' + id);
   }
 
-  updateUsuario(usuario:Usuario)
-  {
-    return this._http.put(this.url+"/"+usuario.id,usuario);
+  updateUsuario(usuario: Usuario) {
+    return this._http.put(this.url + '/' + usuario.id, usuario);
   }
 
-  listUsuarios():Observable<Usuario[]>
-  {   
-    
-    this.usuarios=this._http.get<Usuario[]>(this.url);
-    this.usuarios.subscribe(response=>{
-      this.usuarios2=response;
-    })
+  listUsuarios(): Observable<Usuario[]> {
+
+    this.usuarios = this._http.get<Usuario[]>(this.url);
+    this.usuarios.subscribe(response => {
+      this.usuarios2 = response;
+    });
 
     return this.usuarios;
   }

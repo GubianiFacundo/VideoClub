@@ -10,26 +10,24 @@ import { Router } from '@angular/router';
 })
 export class ModifUserComponent implements OnInit {
 
-  user:Usuario;
-  constructor(private _service:UserServiceService,private _route:Router) { }
+  user: Usuario;
+  constructor(private _service: UserServiceService, private _route: Router) { }
 
   ngOnInit() {
   }
 
-  selectUser(user:Usuario)
-  {
-    this.user=user;
+  selectUser(user: Usuario) {
+    this.user = user;
   }
 
-  modifUser()
-  {
+  modifUser() {
     this._service.updateUsuario(this.user).subscribe(
-      response=>{
-        this.user=null;
-        this._route.navigate(["/modifUser"]);
+      response => {
+        this.user = null;
+        this._route.navigate(['/modifUser']);
 
       }
-    )
+    );
   }
 
 }

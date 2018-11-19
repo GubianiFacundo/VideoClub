@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import{FormsModule} from '@angular/forms'
-import {RouterModule} from '@angular/router'
-import {HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { MovieServiceService } from 'src/app/Services/movie-service.service';
 
-import {routes} from './routes'
+import { routes } from './routes';
 import { AppComponent } from './app.component';
 import { LoginUserComponent } from './Components/login-user/login-user.component';
 import { AltaUserComponent } from './Components/alta-user/alta-user.component';
@@ -41,7 +41,7 @@ import { HistorialUsuarioComponent } from './Components/historial-usuario/histor
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [MovieServiceService,UserServiceService],
+  providers: [MovieServiceService, UserServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

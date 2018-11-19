@@ -8,19 +8,18 @@ import { UserServiceService } from 'src/app/Services/user-service.service';
 })
 export class ListarUsuariosComponent implements OnInit {
 
-  constructor(private _service:UserServiceService) { }
+  constructor(private _service: UserServiceService) { }
 
   ngOnInit() {
     this.getAll();
   }
 
-  getAll()
-  {
+  getAll() {
     this._service.listUsuarios().subscribe(
-      response=>{
-        
+      response => {
+
       }
-    )
+    );
   }
 
 }

@@ -7,10 +7,9 @@ import { MovieServiceService } from 'src/app/Services/movie-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
-  constructor(private _service:MovieServiceService)
-  {
-    
+
+  constructor(private _service: MovieServiceService) {
+
   }
   title = 'Lab 4 - Video Club App';
 }

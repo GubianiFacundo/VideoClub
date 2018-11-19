@@ -10,27 +10,25 @@ import { Router} from '@angular/router';
 })
 export class BajaUserComponent implements OnInit {
 
-  constructor(private _service:UserServiceService,private _route:Router) { }
+  constructor(private _service: UserServiceService, private _route: Router) { }
 
 
 
   ngOnInit() {
-    //this.getAll();
   }
 
 
-  deleteUser(selectedUser:Usuario)
-  {
-    console.log("Called"+selectedUser.id)
+  deleteUser(selectedUser: Usuario) {
+    console.log('Called' + selectedUser.id);
 
     this._service.removeUsuario(selectedUser.id).subscribe
     (
-      response=>{
-        this._service.usuarios2=this._service.usuarios2.filter(fil=>fil.id!=selectedUser.id);
-        alert("Deleted Successfull");
-       
+      response => {
+        this._service.usuarios2 = this._service.usuarios2.filter(fil => fil.id !== selectedUser.id);
+        alert('Deleted Successfull');
+
       }
 
-      )
+      );
   }
 }

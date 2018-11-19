@@ -10,19 +10,16 @@ import { ListarUsuariosComponent } from './Components/listar-usuarios/listar-usu
 import { LoginUserComponent } from './Components/login-user/login-user.component';
 import { DetallePeliculaComponent } from './Components/detalle-pelicula/detalle-pelicula.component';
 
-export const routes:Routes=[
-    {path:'logIn',component:LoginUserComponent },
-     {path:'ListaPeliculas',component:ListarPeliculasComponent},
-     {path:'registerMovie',component:AltaPeliculaComponent},
-     {path:'deleteMovie',component:BajaPeliculaComponent},
-     {path:'modifMovie',component:ModifPeliculaComponent},
-     {path:'registerUser',component:AltaUserComponent},
-     {path:'deleteUser',component:BajaUserComponent},
-     {path:'modifUser',component:ModifUserComponent},
-     {path:'ListaUser',component:ListarUsuariosComponent},
-     {path:'detailMovie',component:DetallePeliculaComponent},
-    // {path:'editarTarea/:id',component:FormTareaComponent},
-    // {path:'',redirectTo:'tareas',pathMatch:'full'},
-     {path:'**',redirectTo:'logIn'}
-
-]
+export const routes: Routes = [
+    {path: 'logIn', component: LoginUserComponent },
+     {path: 'ListaPeliculas', component: ListarPeliculasComponent},
+     {path: 'registerMovie', component: AltaPeliculaComponent},
+     {path: 'deleteMovie', component: BajaPeliculaComponent},
+     {path: 'modifMovie', component: ModifPeliculaComponent},
+     {path: 'registerUser', component: AltaUserComponent},
+     {path: 'deleteUser', component: BajaUserComponent},
+     {path: 'modifUser', component: ModifUserComponent},
+     {path: 'ListaUser', component: ListarUsuariosComponent},
+     {path: 'detailMovie', component: DetallePeliculaComponent},
+     {path: '**', redirectTo: 'logIn'}
+];

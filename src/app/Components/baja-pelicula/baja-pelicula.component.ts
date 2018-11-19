@@ -9,27 +9,25 @@ import { MovieServiceService } from 'src/app/Services/movie-service.service';
   styleUrls: ['./baja-pelicula.component.css']
 })
 export class BajaPeliculaComponent implements OnInit {
-  constructor(private _service:MovieServiceService,private _route:Router) {
-   
+  constructor(private _service: MovieServiceService, private _route: Router) {
+
    }
 
    ngOnInit() {
    // this.listarPeliculas();
   }
 
-  verId(id:number)
-{
+  verId(id: number) {
   console.log(id);
 }
- 
-  bajaPelicula(id:number)
-  {
+
+  bajaPelicula(id: number) {
       this._service.removePelicula(id)
       .subscribe(
-       response=>{
-         this._service.peliculas2=this._service.peliculas2.filter(fil=>fil.id!=id);
+       response => {
+         this._service.peliculas2 = this._service.peliculas2.filter(fil => fil.id !== id);
         }
-      )
+      );
   }
 
 }

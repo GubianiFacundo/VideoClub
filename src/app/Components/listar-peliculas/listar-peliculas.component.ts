@@ -13,8 +13,8 @@ export class ListarPeliculasComponent implements OnInit {
 
 
   constructor(private _service: MovieServiceService,
-    private _serviceU:UserServiceService,
-    private _route:Router) {
+    private _serviceU: UserServiceService,
+    private _route: Router) {
 
    }
 
@@ -26,15 +26,14 @@ export class ListarPeliculasComponent implements OnInit {
     this._service.listUsuarios().subscribe
       (response => {
         console.log(this._service.peliculas2);
-      })
+      });
 
   }
 
-  detalles(pelicula:Pelicula)
-  {
-    this._service.selectPelicula=pelicula;
+  detalles(pelicula: Pelicula) {
+    this._service.selectPelicula = pelicula;
 
-    this._route.navigate(["detailMovie"]);
+    this._route.navigate(['detailMovie']);
   }
 
 }

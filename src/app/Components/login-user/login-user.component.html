@@ -10,8 +10,15 @@
     <input type="password" class="form-control" name="password" [(ngModel)]="user.contrasena" id="exampleInputPassword1" placeholder="Password">
     <br>
     <button type="submit" (click)="logIn()" class="btn btn-primary">Entrar</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember">Recordarme
+    </label>
   </div>
 
+  <div class="container" style="background-color:dimgray">
+    <button type="submit" class="cancelbtn">Cancelar</button>
+    <span class="pass"><a href="#">¿Olvidaste tu contraseña?</a></span>
+  </div>
  
 </form>
 

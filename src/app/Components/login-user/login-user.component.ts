@@ -11,23 +11,23 @@ import { Router } from '@angular/router';
 })
 export class LoginUserComponent implements OnInit {
 
-  user:Usuario=
+  user: Usuario =
   {
-    id:null,
-    nombre:"",
-    apellido:"",
-    usuario:"",
-    contrasena:"",
-    telefono:"",
-    correo:"",
-    estado:"",
-    histPeliculas:[]
-  }
+    id: null,
+    nombre: '',
+    apellido: '',
+    usuario: '',
+    contrasena: '',
+    telefono: '',
+    correo: '',
+    estado: '',
+    histPeliculas: []
+  };
 
 
-  error:Boolean=false;
-  constructor(private _service:UserServiceService,
-    private route:Router) {
+  error: Boolean = false;
+  constructor(private _service: UserServiceService,
+    private route: Router) {
      }
 
   ngOnInit() {
@@ -35,36 +35,32 @@ export class LoginUserComponent implements OnInit {
   }
 
 
-  
-  getAll()
-  {
+
+  getAll() {
     this._service.listUsuarios().subscribe(
-      response=>{
+      response => {
       }
-    )
+    );
   }
 
-  logIn()
-  {
+  logIn() {
 
-    let users=this._service.usuarios2.filter(response=> 
-      response.usuario==this.user.usuario && response.contrasena==this.user.contrasena)
+    const users = this._service.usuarios2.filter(response =>
+      response.usuario === this.user.usuario && response.contrasena === this.user.contrasena);
 
 
-    let userLogged=users.pop();
+    const userLogged = users.pop();
 
-    if(userLogged!=null)
-    {
-      this.error=false;
-      this._service.loginUser=this.user.usuario;
-      this.route.navigate(["/ListaPeliculas"]);
-    }
-    else{
-      this.error=true;
-      console.log("Error");
+    if (userLogged != null) {
+      this.error = false;
+      this._service.loginUser = this.user.usuario;
+      this.route.navigate(['/ListaPeliculas']);
+    } else {
+      this.error = true;
+      console.log('Error');
 
     }
-      
+
   }
 
 }

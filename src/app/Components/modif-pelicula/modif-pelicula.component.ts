@@ -10,26 +10,24 @@ import { Router } from '@angular/router';
 })
 export class ModifPeliculaComponent implements OnInit {
 
-  pelicula:Pelicula;
-  constructor(private _service:MovieServiceService,private _route:Router) { }
+  pelicula: Pelicula;
+  constructor(private _service: MovieServiceService, private _route: Router) { }
 
   ngOnInit() {
    // this.listarPeliculas();
   }
 
 
-  selectToModif(pelicula:Pelicula)
-  {
-    this.pelicula=pelicula;
+  selectToModif(pelicula: Pelicula) {
+    this.pelicula = pelicula;
   }
 
-  modifPelicula()
-  {
+  modifPelicula() {
     this._service.updatePelicula(this.pelicula).subscribe
-    (response=>{
-        this.pelicula=null;
-        this._route.navigate(["/modifMovie"]);
-    })
+    (response => {
+        this.pelicula = null;
+        this._route.navigate(['/modifMovie']);
+    });
   }
 
 }
